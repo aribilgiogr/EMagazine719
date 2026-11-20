@@ -1,0 +1,50 @@
+﻿@model CategoriesViewModel
+
+@{
+    ViewData["Title"] = "Category Management";
+}
+
+<div class="card border-0 rounded-0 shadow bg-light">
+    <div class="card-header border-0">
+        <form method="post">
+
+        </form>
+    </div>
+    <div class="card-body">
+        <h5>Category List:</h5>
+        @if (Model.Categories.Any())
+        {
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th class="text-end">Operations</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Categories)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.Name</td>
+                            <td>@item.Description</td>
+                            <td class="text-end">
+                                <a href="#" class="btn btn-sm btn-success">Toggle</a>
+                                <a href="#" class="btn btn-sm btn-info">Edit</a>
+                                <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <h6 class="text-muted">Any categories not found!</h6>
+        }
+    </div>
+</div>
+
+

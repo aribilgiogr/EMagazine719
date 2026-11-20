@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="BLL/BLL.csproj" />
   <Project Path="DAL/DAL.csproj" />
+  <Project Path="PL.Web/PL.Web.csproj" Id="3457ca20-32c6-4263-9e97-569ed72efd1d" />
 </Solution>
